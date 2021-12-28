@@ -111,8 +111,7 @@ html{
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
-  /* text-align: center; */
+  color: rgb(231, 207, 207);
 }
 .title{
   padding: 6px;
@@ -204,9 +203,6 @@ footer p{
     margin-left: 2%;
     padding-bottom: 30px;
     margin-bottom: 20px;
-    /* margin-left: 10px; */
-
-    /* margin-right: -20%; */
   }
 }
 @media only screen and (max-width: 425px){
