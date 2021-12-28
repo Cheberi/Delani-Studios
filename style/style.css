@@ -107,7 +107,7 @@ html{
   font-family: 'Gabriela', serif;
 }
 .contact{
-  background-image: url('../images/backgrounds/c_image.jpg');
+  background-image: url('../assets/backgrounds/c_image.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
