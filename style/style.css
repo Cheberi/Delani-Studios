@@ -3,22 +3,26 @@ html{
   scroll-behavior: smooth;
 }
 .landing{
-  background-image: url('../images/backgrounds/h_img.jpg');
+  background-image: url('../assets/backgrounds/h_img.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding-top:17%; 
   font-family: 'Gabriela', serif;
-  /* padding-bottom:5%; */
 }
+
 .landing h1{
+  color: black;
   padding: 2px;
   margin: 5px;
 }
+
 .landing p{
+  color: black;
   padding: 2px;
+
 }
 #logo{
   margin-top: 12px;
@@ -26,12 +30,13 @@ html{
   width: 70px;
   height: 70px;;
 }
+
 #mouse-click{
   padding-top : 22px;
   margin-top: 10%;
   padding-bottom: 30px; 
-  /* animation-iteration-count: infinite; */
 }
+
 #mouse-click {
   animation: bounce 2s infinite;
 }
@@ -59,7 +64,7 @@ html{
 }
 .services{
   text-align: center;
-  background-image: url("../images/backgrounds/s_image.jpg");
+  background-image: url("../assets/backgrounds/s_image.jpg");
   color: white;
   background-position: center;
   background-size: cover;
