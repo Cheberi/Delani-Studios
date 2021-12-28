@@ -91,7 +91,6 @@ $(document).ready(function () {
 
 
 
-//user Interface logic
 $(document).ready(function () {
     $('form.contact').on('submit', function (e) {
         e.preventDefault();
