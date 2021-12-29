@@ -17,11 +17,6 @@ cd to the Delani-studios directory.
 
 Open the index.html on your default browser.
 
-Behavior Driven Development
-Under what we do, clicking on the image will toggle a paragraph explaining about the service.
-Hovering over each image will show a white box with the name of the image.
-Upon entering your details and message in the contact-us form, the data will be sent to mailchimp and you will receive a confirmation message thanking you for contacting them.
-In case, submit form is entered without any values in the form, an alert message will pop-up telling you to put in valid information.​
 ## Technologies used.
 Html5
 Bootstrap
@@ -30,4 +25,4 @@ Javascript
 Jquery
 Markdown​
 ## Known Bugs
-
+jquery not responding to the webpage
