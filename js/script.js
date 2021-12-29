@@ -1,108 +1,121 @@
-$(document).ready(function () {
+$(document).ready(function(){
+    
+    // Design
+    $("#design-image").click(function(){
 
-    //toggle what to do.
-    $('#design').click(function () {
-        $('#design-content').show(function () {
-            $('#design').hide('fast');
-        });
-    });
-    $('#design-content').click(function () {
-        $('#design').show(function () {
-            $('#design-content').hide('fast');
-        });
+        $(".design").slideToggle();
+        $("#designPic").fadeToggle();
     });
 
-    $('#dev').click(function () {
-        $('#dev-content').show(function () {
-            $('#dev').hide('fast');
-        });
-    });
-    $('#dev-content').click(function () {
-        $('#dev').show(function () {
-            $('#dev-content').hide('fast');
-        });
+    // Development
+    $("#development").click(function(){
+
+        $(".development").slideToggle();
+        $("#developmentPic").fadeToggle();
     });
 
-    $('#product').click(function () {
-        $('#product-content').show(function () {
-            $('#product').hide('fast');
-        });
-    });
-    $('#product-content').click(function () {
-        $('#product').show(function () {
-            $('#product-content').hide('fast');
-        });
+    // Product management
+    $("#management").click(function(){
+
+        $(".management").slideToggle();
+        $("#managementPic").fadeToggle();
     });
 
+    //all
+    $("#what").click(function(){
 
-    //portfolio
-    $('#work1').mouseenter(function () {
-        $('.work-heading').filter('#work1-title').show("slow");
-    }).mouseleave(function () {
-        $('#work1-title').hide("slow");
-    });
-
-
-    $('#work2').mouseenter(function () {
-        $('.work-heading').filter('#work2-title').show("slow");
-    }).mouseleave(function () {
-        $('#work2-title').hide("slow");
-    });
-
-    $('#work3').mouseenter(function () {
-        $('.work-heading').filter('#work3-title').show("slow");
-    }).mouseleave(function () {
-        $('#work3-title').hide("slow");
-    });
-
-
-    $('#work4').mouseenter(function () {
-        $('.work-heading').filter('#work4-title').show("slow");
-    }).mouseleave(function () {
-        $('#work4-title').hide("slow");
-    });
-
-    $('#work5').mouseenter(function () {
-        $('.work-heading').filter('#work5-title').show("slow");
-    }).mouseleave(function () {
-        $('#work5-title').hide("slow");
-    });
-
-
-    $('#work6').mouseenter(function () {
-        $('.work-heading').filter('#work6-title').show("slow");
-    }).mouseleave(function () {
-        $('#work6-title').hide("slow");
-    });
-
-    $('#work7').mouseenter(function () {
-        $('.work-heading').filter('#work7-title').show("slow");
-    }).mouseleave(function () {
-        $('#work7-title').hide("slow");
-    });
-    $('#work8').mouseenter(function () {
-        $('.work-heading').filter('#work8-title').show("slow");
-    }).mouseleave(function () {
-        $('#work8-title').hide("slow");
+        $(".management").fadeToggle();
+        $(".development").fadeToggle();
+        $(".design").fadeToggle();
+        $("#designImage").fadeToggle();
+        $("#developmentImage").fadeToggle();
+        $("#managemenImage").fadeToggle();
+        
     });
 });
+//  portfolio
 
+$(document).ready(function(){
 
+    // First Row hovering effect
 
-
-
-$(document).ready(function () {
-    $('form.contact').on('submit', function (e) {
-        e.preventDefault();
-        var formData = $(this).serialize();
-        $.getJSON('https://saboticonstituency.info/delani_studio/mc-end-point.php', formData, function (data) {
-            if (data.status === 'subscribed') {
-                alert('We have received your message.Our team will get back to you as soon as possible. Thank you for reaching out to us');
-                $('form.contact')[0].reset();
-            } else {
-                alert("error: " + data.detail);
-                $('form.contact')[0].reset();
-            }
-        });
+    $("#work4").hover(function(){
+        $("#work4BoxName").fadeToggle();
     });
-})
+
+    $("#work3").hover(function(){
+        $("#work3BoxName").fadeToggle();
+    });
+
+    $("#work2").hover(function(){
+        $("#work2BoxName").fadeToggle();
+    });
+
+    $("#work1").hover(function(){
+        $("#work1BoxName").fadeToggle();
+    });
+
+    // second row hovering effect
+
+    $("#work5").hover(function(){
+        $("#work5BoxName").fadeToggle();
+    });
+
+    $("#work6").hover(function(){
+        $("#work6BoxName").fadeToggle();
+    });
+
+    $("#work7").hover(function(){
+        $("#work7BoxName").fadeToggle();
+    });
+
+    $("#work8").hover(function(){
+        $("#work8BoxName").fadeToggle();
+    });
+
+});
+
+// javascript form validation
+
+var contactUsValidation = function(){
+
+    var name = document.getElementById("userName").value;    
+    var email = document.getElementById("userEmail").value;
+    var sms = document.getElementById("message").value;
+
+    // validation
+
+    if (name.length < 2 || name == " "){
+        alert("Please enter a valid name! \nName must be filled")
+        return false;
+    };
+
+    atPosition = email.indexOf("@");
+    dotPosition = email.lastIndexOf(".");
+
+    if(email == " "){
+        alert("Please fill in!")
+        return false;
+    };
+
+    if (atPosition <= 2){
+        alert("Invalid email address!")
+        return false;
+    };
+
+    if(dotPosition  == -1){
+        alert("Invalid email address.")
+        return false;
+    };
+
+    if(sms == " " || sms < 2){
+        alert("Please enter your message")
+        return false;
+    }
+
+    else{
+        alert("Hi "+name+", your message has been sent. We will reach to you as soon as possible.")
+    }
+
+
+};
