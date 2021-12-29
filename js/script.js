@@ -1,121 +1,35 @@
-$(document).ready(function(){
-    
-    // Design
-    $("#design-image").click(function(){
+$(document).ready(function() {
 
-        $(".design").slideToggle();
-        $("#designPic").fadeToggle();
-    });
-
-    // Development
+    $("#design").click(function(){
+      $("#design-showing").toggle();
+      $(".hide-design-image").toggle();
+    })
+  
     $("#development").click(function(){
-
-        $(".development").slideToggle();
-        $("#developmentPic").fadeToggle();
+      $("#development-showing").toggle();
+      $(".hide-development-image").toggle();
+    })
+  
+    $("#productManagement").click(function(){
+      $("#product-management-showing").toggle();
+      $(".hide-product-management").toggle();
+    })
+  
+    $(".Hover").hover(function(){
+      $(this).animate({opacity:'1'});
+    },
+    function(){
+      $(this).animate({opacity:'0'});
+    })
+  $('.submit').click(function () {
+          var Name = $('#mce-FNAME').val();
+          var Email = $('#mce-EMAIL').val();
+          var Message = $('#mce-MESSAGE');
+          var key ='c8fbd9a0cf3958e02be2822e55cfbfc5-us4';
+          if (Name == '' || Email == '' || Message == '') {
+              alert('Please make sure you have filled in the form correctly!');
+          } else {
+              alert(' Hi ' + Name + ' We have received your message. Thank you for reaching out to us.');
+          }
     });
-
-    // Product management
-    $("#management").click(function(){
-
-        $(".management").slideToggle();
-        $("#managementPic").fadeToggle();
-    });
-
-    //all
-    $("#what").click(function(){
-
-        $(".management").fadeToggle();
-        $(".development").fadeToggle();
-        $(".design").fadeToggle();
-        $("#designImage").fadeToggle();
-        $("#developmentImage").fadeToggle();
-        $("#managemenImage").fadeToggle();
-        
-    });
-});
-//  portfolio
-
-$(document).ready(function(){
-
-    // First Row hovering effect
-
-    $("#work4").hover(function(){
-        $("#work4BoxName").fadeToggle();
-    });
-
-    $("#work3").hover(function(){
-        $("#work3BoxName").fadeToggle();
-    });
-
-    $("#work2").hover(function(){
-        $("#work2BoxName").fadeToggle();
-    });
-
-    $("#work1").hover(function(){
-        $("#work1BoxName").fadeToggle();
-    });
-
-    // second row hovering effect
-
-    $("#work5").hover(function(){
-        $("#work5BoxName").fadeToggle();
-    });
-
-    $("#work6").hover(function(){
-        $("#work6BoxName").fadeToggle();
-    });
-
-    $("#work7").hover(function(){
-        $("#work7BoxName").fadeToggle();
-    });
-
-    $("#work8").hover(function(){
-        $("#work8BoxName").fadeToggle();
-    });
-
-});
-
-// javascript form validation
-
-var contactUsValidation = function(){
-
-    var name = document.getElementById("userName").value;    
-    var email = document.getElementById("userEmail").value;
-    var sms = document.getElementById("message").value;
-
-    // validation
-
-    if (name.length < 2 || name == " "){
-        alert("Please enter a valid name! \nName must be filled")
-        return false;
-    };
-
-    atPosition = email.indexOf("@");
-    dotPosition = email.lastIndexOf(".");
-
-    if(email == " "){
-        alert("Please fill in!")
-        return false;
-    };
-
-    if (atPosition <= 2){
-        alert("Invalid email address!")
-        return false;
-    };
-
-    if(dotPosition  == -1){
-        alert("Invalid email address.")
-        return false;
-    };
-
-    if(sms == " " || sms < 2){
-        alert("Please enter your message")
-        return false;
-    }
-
-    else{
-        alert("Hi "+name+", your message has been sent. We will reach to you as soon as possible.")
-    }
-
-
-};
+  });
