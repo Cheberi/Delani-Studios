@@ -1,100 +1,98 @@
 
-$(document).ready(function () {
-
-  //toggle what to do.
-  $('#design').click(function () {
-      $('#design-content').show(function () {
-          $('#design').hide('fast');
-      });
+$(document).ready(function(){
+    $("#development-image").click(function(){
+      $("#development-image").slideDown('1500').hide('1000');
+      $("#development").show('1500');
+    });
+    $("#development").click(function(){
+      $("#development").slideUp('1500');
+      $("#development-image").slideDown('1500');
+    });
   });
-  $('#design-content').click(function () {
-      $('#design').show(function () {
-          $('#design-content').hide('fast');
-      });
+  
+  $(document).ready(function(){
+    $("#design-image").click(function(){
+      $("#design-image").slideDown('1500').hide('1000');
+      $("#design").show('1500');
+    });
+    $("#design").click(function(){
+      $("#design").slideUp('1500');
+      $("#design-image").slideDown('1500');
+    });
   });
-
-  $('#dev').click(function () {
-      $('#dev-content').show(function () {
-          $('#dev').hide('fast');
-      });
-  });
-  $('#dev-content').click(function () {
-      $('#dev').show(function () {
-          $('#dev-content').hide('fast');
-      });
-  });
-
-  $('#product').click(function () {
-      $('#product-content').show(function () {
-          $('#product').hide('fast');
-      });
-  });
-  $('#product-content').click(function () {
-      $('#product').show(function () {
-          $('#product-content').hide('fast');
-      });
+  
+  $(document).ready(function(){
+    $("#product-image").click(function(){
+      $("#product-image").slideDown('1500').hide('1000');
+      $("#product").show('1500');
+    });
+    $("#product").click(function(){
+      $("#product").slideUp('1500');
+      $("#product-image").slideDown('1500');
+    });
   });
 
+  
 
-  //portfolio
-  $('#work1').mouseenter(function () {
-      $('.work-heading').filter('#work1-title').show("slow");
-  }).mouseleave(function () {
-      $('#work1-title').hide("slow");
+  $(document).ready(function(){
+    $("#work1").mouseover(function(){
+      $("#overlay").show();
+    }).mouseout(function(){
+      $("#overlay").hide();
+    });
   });
-
-
-  $('#work2').mouseenter(function () {
-      $('.work-heading').filter('#work2-title').show("slow");
-  }).mouseleave(function () {
-      $('#work2-title').hide("slow");
+  $(document).ready(function(){
+    $("#work2").mouseover(function(){
+      $("#overlay2").show();
+    }).mouseout(function(){
+      $("#overlay2").hide();
+    });
   });
-
-  $('#work3').mouseenter(function () {
-      $('.work-heading').filter('#work3-title').show("slow");
-  }).mouseleave(function () {
-      $('#work3-title').hide("slow");
+  $(document).ready(function(){
+    $("#work3").mouseover(function(){
+      $("#overlay3").show();
+    }).mouseout(function(){
+      $("#overlay3").hide();
+    });
   });
-
-
-  $('#work4').mouseenter(function () {
-      $('.work-heading').filter('#work4-title').show("slow");
-  }).mouseleave(function () {
-      $('#work4-title').hide("slow");
+  $(document).ready(function(){
+    $("#work4").mouseover(function(){
+      $("#overlay4").show();
+    }).mouseout(function(){
+      $("#overlay4").hide();
+    });
   });
+  
 
-  $('#work5').mouseenter(function () {
-      $('.work-heading').filter('#work5-title').show("slow");
-  }).mouseleave(function () {
-      $('#work5-title').hide("slow");
+  $(document).ready(function(){
+    $("#work5").mouseover(function(){
+      $("#overlay5").show();
+    }).mouseout(function(){
+      $("#overlay5").hide();
+    });
+    $("#work6").mouseover(function(){
+      $("#overlay6").show();
+    }).mouseout(function(){
+      $("#overlay6").hide();
+    });
+    $("#work7").mouseover(function(){
+      $("#overlay7").show();
+    }).mouseout(function(){
+      $("#overlay7").hide();
+    });
+    $("#work8").mouseover(function(){
+      $("#overlay8").show();
+    }).mouseout(function(){
+      $("#overlay8").hide();
+    });
   });
-
-
-  $('#work6').mouseenter(function () {
-      $('.work-heading').filter('#work6-title').show("slow");
-  }).mouseleave(function () {
-      $('#work6-title').hide("slow");
-  });
-
-  $('#work7').mouseenter(function () {
-      $('.work-heading').filter('#work7-title').show("slow");
-  }).mouseleave(function () {
-      $('#work7-title').hide("slow");
-  });
-  $('#work8').mouseenter(function () {
-      $('.work-heading').filter('#work8-title').show("slow");
-  }).mouseleave(function () {
-      $('#work8-title').hide("slow");
-  });
-});
-
-
-
+  
+  
 
 
 //user Interface logic
 $(document).ready(function () {
-  $('form.contact').on('submit', function (e) {
+  $('.contact').on('submit', function (e) {
       e.preventDefault();
       var formData = $(this).serialize();
       $.getJSON('https://saboticonstituency.info/delani_studio/mc-end-point.php', formData, function (data) {

@@ -146,9 +146,7 @@ html{
   .image8:hover{
     opacity: 0.3;
   }
-  .text:hover{
-    opacity: 1;
-  }
+  
   #portfolio{
     margin-left:8%;
     margin-right: 16%; 
