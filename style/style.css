@@ -130,6 +130,7 @@ html{
   font-size: 30px;
   padding-top: 50%;
   font-family: 'Delius Swash Caps', cursive;
+  opacity: 1;
 }
   .col-md-3 img{
     width:100%px;
@@ -226,11 +227,7 @@ button:hover {
     font-family: 'Gabriela', serif;
   }
 
-  #comment{
-    margin-left: 4%;
-    width: 84%;
-  }
-}
+  
 .form-control::-webkit-input-placeholder { 
   color: white; 
 }
