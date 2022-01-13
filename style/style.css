@@ -181,13 +181,14 @@ html{
     margin: 0 auto;
 }
 
-.contact-name-email input {
+.contact-name-email {
     width: 320px;
     margin-bottom: 1rem;
     padding: 0.5rem;
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
     border: 2px solid white;
+    align-items: center;
 }
 
 .contact-textarea {
@@ -226,7 +227,7 @@ button:hover {
   }
 
   
-.form-control::-webkit-input-placeholder { 
+.form-control:-webkit-input-placeholder { 
   color: white; 
 }
 

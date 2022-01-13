@@ -32,7 +32,7 @@ $(document).ready(function(){
     });
   });
 
-  
+
 
   $(document).ready(function(){
     $("#work1").mouseover(function(){
@@ -90,19 +90,20 @@ $(document).ready(function(){
   
 
 
-//user Interface logic
-$(document).ready(function () {
-  $('.contact').on('submit', function (e) {
-      e.preventDefault();
-      var formData = $(this).serialize();
-      $.getJSON('https://saboticonstituency.info/delani_studio/mc-end-point.php', formData, function (data) {
-          if (data.status === 'subscribed') {
-              alert('We have received your message.Our team will get back to you as soon as possible. Thank you for reaching out to us');
-              $('form.contact')[0].reset();
-          } else {
-              alert("error: " + data.detail);
-              $('form.contact')[0].reset();
-          }
-      });
+  $(document).ready(function(){
+    $("form#form34A").submit(function(event){
+      // event.preventDefault();
+      var name = $("input#inline1").val();
+      var email = $("input#inline2").val();
+      var message = $("textarea#comment").val();
+      if ($("input#inline1").val() && $("input#inline2").val()){
+        alert (name + ", we have received your message. Thank you for reaching out to us.");
+      }
+      else {
+        alert("Please enter your name and email!");
+      }
+      
+    });
+  
   });
-})
+  
