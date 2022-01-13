@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delani-Studio</title>
     <link rel="stylesheet" href="style/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Delani Studio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </head>
+</head>
+   
 <body>
     <div class="landing">
         <img src="assets/logo/logo.png" alt="logo" id="logo">
@@ -75,57 +78,58 @@
         <h2>PORTFOLIO</h2>
         <div class="row" id="portfolio">
           <div class="col-md-3" id="work1">
-            <img src="assets/portfolio/work1.jpg" alt="work1" >
+            <img src="assets/portfolio/work1.jpg" alt="work1" class="image1" >
             <p id="overlay"class="text">Black Studio</p>
           </div>
           <div class="col-md-3" id="work2">
-            <img src="assets/portfolio/work2.jpg" alt="work2" id="work2">
+            <img src="assets/portfolio/work2.jpg" alt="work2" class="image2" id="work2">
             <p id="overlay2" class="text">Ontario Security</p>
           </div>
           <div class="col-md-3" id="work3">
-            <img src="assets/portfolio/work3.jpg" alt="work3">
+            <img src="assets/portfolio/work3.jpg" alt="work3" class="image3">
             <p id="overlay3"class="text">Pyramids</p>
           </div>
           <div class="col-md-3" id="work4">
-            <img src="assets/portfolio/work4.jpg" alt="work4">
+            <img src="assets/portfolio/work4.jpg" alt="work4" class="image4">
             <p id="overlay4" class="text">Jim Carry</p>
           </div>
         </div>
         <div class="row" id="portfolio">
             <div class="col-md-3" id="work5">
-              <img src="assets/portfolio/work5.jpg" alt="work5">
+              <img src="assets/portfolio/work5.jpg" alt="work5" class="image5">
               <p id="overlay5" class="text">Have A Nice Day</p>
             </div>
             <div class="col-md-3" id="work6">
-              <img src="assets/portfolio/work6.jpg" alt="work6">
+              <img src="assets/portfolio/work6.jpg" alt="work6" class="image6">
               <p id="overlay6"class="text">Calculator</p>
             </div>
             <div class="col-md-3" id="work7">
-              <img src="assets/portfolio/work7.jpg" alt="work7">
+              <img src="assets/portfolio/work7.jpg" alt="work7" class="image7">
               <p id="overlay7" class="text">Burned</p>
             </div>
             <div class="col-md-3" id="work8">
-              <img src="assets/portfolio/work8.jpg" alt="work8">
+              <img src="assets/portfolio/work8.jpg" alt="work8" class="image8">
               <p id="overlay8" class="text">Giraffe Restaurant</p>
             </div>
           </div>
       </div> 
-      <div class="contact">
-        <h2>CONTACT US</h2>
-    
-        <form id="forms" action="https://gmail.us3.list-manage.com/subscribe/post" method="POST">
-          <input type="hidden" name="u" value="e71bed4d6ae5a7c984dfe28b0">
-          <input type="hidden" name="id" value="dbf7e27685">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder = "Name...." name="MERGE1" id="MERGE1" size="25" value="">
-            <input type="email" class="form-control"  placeholder = "Email...." autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
-          </div>
-          <div class="form">
-            <textarea class="form-control" rows="8" id="comment" placeholder = "Your message here...."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary col-md-1">Submit</button>
+      <section class="contact">
+        <article class="contact-title">
+            <h2>contact us</h2>
+        </article>
+        <form>
+            <article class="contact-name-email">
+                <input type="text" placeholder="Name..." id="inline1" required>
+                <input type="email" placeholder="Email..." id="inline2" required>
+            </article>
+            <article class="contact-textarea">
+                <textarea placeholder="Your message here..." cols="44" rows="10"></textarea>
+            </article>
+            <div class="button">
+                <button onclick="thankYou()">SUBMIT</button>
+            </div>
         </form>
-      </div>
+    </section>
       <footer>
         <img src="assets/social_icons/twitter.png" alt="twitter">
         <img src="assets/social_icons/dribble.png" alt="dribble">
